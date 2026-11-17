@@ -1,0 +1,19 @@
+✔ D1 rejects invalid decimal and repeated pagination without changing reviews (810.7239ms)
+✔ D1 accepts boundary pagination and safe pages beyond the end (587.2556ms)
+✔ D2 defaults omitted text, accepts empty text, and stores whitespace verbatim (464.5716ms)
+✔ D2 enforces the 500-character limit on untrimmed text and rejects non-strings (526.3633ms)
+✔ D3 compares trimmed authors case-insensitively and validates before conflict checks (451.7897ms)
+✔ D3 deletion releases author identity and leaves deleted IDs unavailable (388.8963ms)
+✔ D4 returns null for initially empty products and after the last deletion (476.308ms)
+✔ a fresh process restores exactly the seed reviews after creations and deletions (964.647ms)
+✔ D5 well-formed scalar, null, and array JSON use product lookup then field validation (479.9611ms)
+✔ D5 unknown product precedes all field errors in well-formed objects (517.1072ms)
+✔ malformed JSON precedes D5 product lookup and never mutates reviews (542.5973ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6414.9419

@@ -1,0 +1,48 @@
+COMMAND node tools/contract-check.mjs --base http://127.0.0.1:50078 --strict-values
+
+INFO  FRONTEND.md  no "Demo accounts" section in FRONTEND.md or BACKEND.md: examples with {{token:…}} cannot be sent
+contract-check — 38 example(s) in 2 file(s) of docs\api, sent to http://127.0.0.1:50078
+sign-in example: none found
+
+PASS  reviews.md:41  GET /api/health → 200 (51 ms)
+PASS  reviews.md:84  GET /api/products/cap/reviews → 200 (5 ms)
+PASS  reviews.md:97  GET /api/products/cap/reviews?limit=1&page=2 → 200 (12 ms)
+PASS  reviews.md:110  GET /api/products/cap/reviews?limit=1&page=4 → 200 (15 ms)
+PASS  reviews.md:123  GET /api/products/jacket/reviews → 200 (2 ms)
+PASS  reviews.md:136  GET /api/products/cap/reviews?limit=0 → 400 (12 ms)
+PASS  reviews.md:149  GET /api/products/cap/reviews?limit=100 → 400 (6 ms)
+PASS  reviews.md:162  GET /api/products/cap/reviews?limit=abc&page=2.5 → 400 (10 ms)
+PASS  reviews.md:175  GET /api/products/cap/reviews?page=-1 → 400 (16 ms)
+PASS  reviews.md:188  GET /api/products/cap/reviews?page=100 → 200 (15 ms)
+PASS  reviews.md:201  GET /api/products/kimono/reviews → 404 (14 ms)
+PASS  reviews.md:240  GET /api/products/cap/rating → 200 (15 ms)
+PASS  reviews.md:253  GET /api/products/somi/rating → 200 (14 ms)
+PASS  reviews.md:266  GET /api/products/kimono/rating → 404 (16 ms)
+PASS  reviews.md:279  GET /api/products/tote/rating → 200 (3 ms)
+PASS  reviews.md:323  POST /api/products/hoodie/reviews → 201 (29 ms)
+PASS  reviews.md:339  POST /api/products/hoodie/reviews → 201 (14 ms)
+PASS  reviews.md:355  POST /api/products/socks/reviews → 201 (16 ms)
+PASS  reviews.md:371  POST /api/products/hoodie/reviews → 409 (15 ms)
+PASS  reviews.md:387  POST /api/products/cap/reviews → 409 (15 ms)
+PASS  reviews.md:403  POST /api/products/hoodie/reviews → 400 (15 ms)
+PASS  reviews.md:419  POST /api/products/hoodie/reviews → 400 (16 ms)
+PASS  reviews.md:435  POST /api/products/cap/reviews → 201 (16 ms)
+PASS  reviews.md:451  POST /api/products/tote/reviews → 201 (15 ms)
+PASS  reviews.md:467  POST /api/products/tote/reviews → 201 (15 ms)
+PASS  reviews.md:483  POST /api/products/kimono/reviews → 404 (2 ms)
+PASS  reviews.md:499  POST /api/products/kimono/reviews → 404 (13 ms)
+PASS  reviews.md:515  POST /api/products/cap/reviews → 400 (16 ms)
+PASS  reviews.md:531  POST /api/products/kimono/reviews → 400 (15 ms)
+PASS  reviews.md:551  GET /api/products/tote/rating → 200 (2 ms)
+PASS  reviews.md:582  DELETE /api/reviews/r1 → 204 (13 ms)
+PASS  reviews.md:592  GET /api/products/cap/rating → 200 (1 ms)
+PASS  reviews.md:605  DELETE /api/reviews/r1 → 404 (0 ms)
+PASS  reviews.md:618  DELETE /api/reviews/no-such-review → 404 (14 ms)
+PASS  reviews.md:631  DELETE /api/reviews/r2 → 204 (16 ms)
+PASS  reviews.md:641  POST /api/products/cap/reviews → 201 (15 ms)
+PASS  reviews.md:657  GET /api/products/cap/rating → 200 (15 ms)
+PASS  reviews.md:670  GET /api/products/cap/reviews → 200 (15 ms)
+
+PASS  README.md  every endpoint in the table has an example (5/5)
+
+38/38 examples answered as written; 0 FAIL line(s)

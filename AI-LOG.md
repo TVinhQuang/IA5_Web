@@ -1,6 +1,6 @@
 # AI assistance log - IA#5
 
-Student: Tran Vinh Quang (24127523).
+Student: Trần Vinh Quang (24127523).
 
 ## 2026-11-17 - Requirement analysis and untouched starter commit
 
@@ -30,4 +30,24 @@ Kept: Both contract files without changes; all 38 request/response pairs parsed,
 Changed: Accepted the two trailing spaces in the supplied README as intentional Markdown line breaks rather than rewriting the approved file to satisfy a generic whitespace check.
 Rejected: No contract changes were needed. The initial `npm test` PowerShell launch was replaced by `npm.cmd test`; the real starter baseline was then observed as 0 pass / 24 fail because the reviews API was absent.
 By hand: The student supplied their name and confirmed student ID 24127523.
-Result: Specification committed before implementation; implementation request committed before dispatch. Implementation results and final review will be appended after they occur.
+Result: Specification committed before implementation; implementation request committed before dispatch. The implementation assistant wrote 11 HTTP tests first and observed 0 pass / 11 fail for missing API behavior, then implemented and committed only `src/app.js` and `test/decisions.test.js` as `5c18d5f`. It reported 24/24 starter checks, 11/11 supplemental tests, and 38/38 examples in each contract mode. No unresolved self-review concern was reported.
+
+## 2026-11-17 - Independent verification and submission evidence
+
+Tool: Codex coordinator.
+Asked for: Complete the assignment from the approved contract and prepare the required submission documents.
+Kept: The implementation from Request 1 after independently running `npm.cmd test`, the supplemental tests, and both contract modes on newly started servers; outputs are retained in `docs/evidence/`.
+Changed: Added reproducible verification documentation and an evidence-based self-assessment; retained the student's existing screenshots as baseline evidence rather than presenting them as final passing-test screenshots.
+Rejected: No functional implementation change was needed after these verification runs. `git diff 32c4110 -- checks tools src/data.js src/server.js package.json package-lock.json` and `git diff 3fdab82 -- docs/api` were both empty.
+By hand: The student chose the approved contract and confirmed their identity; the coordinator authored the implementation handoff, verification record, log, and report with AI assistance. No student-authored implementation is claimed.
+Result: 24/24 starter checks, 11/11 supplemental checks, and 38/38 contract examples in both normal and strict-values modes; all exited 0, with no failed or skipped tests.
+
+## 2026-11-17 - Independent implementation review
+
+Tool: Codex, with a fresh read-only task reviewer.
+Asked for: Check the committed implementation against the approved contract and Task 1, judging specification compliance and code quality.
+Kept: The implementation after the reviewer approved it with no Critical or Important findings.
+Changed: Documented the review's optional coverage limitation: the HTTP creation-order test does not deliberately force identical timestamps. The implementation's reverse insertion order and stable sort handle ties correctly.
+Rejected: No code fix was requested for this optional test improvement. Unchanged port configuration and protected-file comparisons were separately verified by the coordinator; the 500 branch was inspected without adding a fault-injection route.
+By hand: No new student-authored code is claimed.
+Result: Task quality Approved; specification compliant. Final submission review and ZIP inspection follow after the evidence documents are complete.

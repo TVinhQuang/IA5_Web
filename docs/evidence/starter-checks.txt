@@ -1,0 +1,46 @@
+
+> ia5-starter@1.0.0 test
+> node --test --test-reporter=spec checks/reviews.test.js
+
+▶ listing reviews
+  ✔ C1 (R1, R3, R4) a fresh server lists the two seed reviews of cap, newest first (716.9454ms)
+  ✔ C2 (R4) a product with no reviews answers 200 with an empty list (512.4913ms)
+  ✔ C3 (R4) the review created last comes first (545.6505ms)
+  ✔ C4 (R4) limit and page cut the list; a page past the end is empty (729.9609ms)
+  ✔ C5 (R4) 10 reviews by default, never more than 50 (1223.5064ms)
+✔ listing reviews (3730.9041ms)
+▶ adding a review
+  ✔ C6 (R5, R6) a valid review answers 201 with the review, and it is listed first (416.3376ms)
+  ✔ C7 (R6) id, productId, createdAt and other fields sent in the body are ignored (296.1148ms)
+  ✔ C8 (R5) the string "5" is not a rating — 400 VALIDATION, nothing created (475.6913ms)
+  ✔ C9 (R5) 0, 6, 4.5, null and a missing rating are refused (517.6891ms)
+  ✔ C10 (R5) author: missing, only spaces, 61 characters, or not a string are refused; 60 is fine (514.2243ms)
+  ✔ C11 (R5) text: 501 characters or not a string are refused; 500 is fine (317.4198ms)
+  ✔ C12 (R5) every invalid field gets its own message, not only the first (430.983ms)
+  ✔ C13 (R7) a second review by the same author answers 409 CONFLICT (369.2639ms)
+  ✔ C14 (R7) the same author may review another product (369.7198ms)
+✔ adding a review (3708.6061ms)
+▶ rating
+  ✔ C15 (R8) count and average of the seed reviews (313.6594ms)
+  ✔ C16 (R8) the average follows new reviews, rounded to 2 decimals (344.236ms)
+  ✔ C17 (R8) a product with no reviews has count 0 (average: decision D4) (266.7016ms)
+✔ rating (925.0029ms)
+▶ removing a review
+  ✔ C18 (R9) DELETE answers 204 with no body; the review leaves the list and the rating (304.5628ms)
+  ✔ C19 (R9) a review deleted twice, or never created, answers 404 NOT_FOUND (293.8173ms)
+  ✔ C20 (R7, R9) after a delete the author may review that product again (287.729ms)
+  ✔ C21 (R9) review ids are unique and never reused after a delete (302.9127ms)
+✔ removing a review (1189.4021ms)
+▶ errors
+  ✔ C22 (R10) an unknown product answers 404 NOT_FOUND on the three product endpoints (298.0652ms)
+  ✔ C23 (R11) a body that is not JSON answers 400 INVALID_JSON, as JSON (293.5017ms)
+  ✔ C24 (R12) an unknown path under /api answers 404 NOT_FOUND, as JSON (271.673ms)
+✔ errors (863.5243ms)
+ℹ tests 24
+ℹ suites 5
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10630.8434

@@ -1,6 +1,6 @@
 # Reviews API Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Complete IA#5 from the user's approved contract and produce a verifiable submission archive.
 
@@ -41,14 +41,14 @@
 - Consumes: `PRODUCTS` and `SEED_REVIEWS` from `src/data.js`; approved request and response shapes and exact messages from `docs/api/`.
 - Produces: the existing named/default `app` export implementing exactly the five public endpoints, with shared JSON errors.
 
-- [ ] Read both spec files and the existing checks before changing production code.
-- [ ] Add HTTP regression tests for the five Review Focus items in `test/decisions.test.js`; use the existing `startServer()` helper, which starts an isolated process per test. Test real responses and state, without mocking application internals.
-- [ ] Run `node --test --test-reporter=spec test/decisions.test.js` on the starter and confirm failure due to absent behavior. Baseline `npm.cmd test` was already observed as 0 pass / 24 fail before implementation.
-- [ ] Implement process-local review state, the four missing routes, exact validation messages, server-owned fields, author uniqueness, pagination, live ratings, deletion, unknown API routes, and JSON error middleware in `src/app.js`.
-- [ ] Run `npm.cmd test` (expected: 24 pass, 0 fail).
-- [ ] Run `node --test --test-reporter=spec test/decisions.test.js` (expected: all supplemental tests pass).
-- [ ] Verify contract-check normally and with `--strict-values`, each on its own freshly started server (expected: 38/38 examples, 0 FAIL lines, all five endpoints covered).
-- [ ] Verify protected files and the approved contract have no changes from their baseline commits; self-review and report results before committing only the allowed implementation/test files.
+- [x] Read both spec files and the existing checks before changing production code.
+- [x] Add HTTP regression tests for the five Review Focus items in `test/decisions.test.js`; use the existing `startServer()` helper, which starts an isolated process per test. Test real responses and state, without mocking application internals.
+- [x] Run `node --test --test-reporter=spec test/decisions.test.js` on the starter and confirm failure due to absent behavior. Baseline `npm.cmd test` was already observed as 0 pass / 24 fail before implementation.
+- [x] Implement process-local review state, the four missing routes, exact validation messages, server-owned fields, author uniqueness, pagination, live ratings, deletion, unknown API routes, and JSON error middleware in `src/app.js`.
+- [x] Run `npm.cmd test` (expected: 24 pass, 0 fail).
+- [x] Run `node --test --test-reporter=spec test/decisions.test.js` (expected: all supplemental tests pass).
+- [x] Verify contract-check normally and with `--strict-values`, each on its own freshly started server (expected: 38/38 examples, 0 FAIL lines, all five endpoints covered).
+- [x] Verify protected files and the approved contract have no changes from their baseline commits; self-review and report results before committing only the allowed implementation/test files.
 
 ### Task 2: Review, document, and package
 
@@ -61,10 +61,10 @@
 - Consumes: Task 1's committed API and actual command results; student identity supplied by the user.
 - Produces: evidence-backed English documentation and a ZIP with the complete project, hidden `.git`, and no `node_modules/` or session scratch files.
 
-- [ ] Keep the exact English implementation dispatch in `PROMPT.md`, committed before sending it to the implementation assistant.
-- [ ] Log prior provenance honestly: the user chose D1-D5 and supplied a ChatGPT-drafted contract; the external prompt/transcript is unavailable. Earlier Codex review/setup entries are reconstructed from this conversation, not represented as contemporaneous entries.
-- [ ] Obtain an independent review of the committed implementation against the approved contract, including the Review Focus inputs; resolve material findings with a failing regression test before the fix.
-- [ ] Record actual verification commands, outcomes, protected-file checks, and commit chronology in `docs/verification.md`.
-- [ ] Write the six-row self-assessment with specific evidence and a candid `What I did not manage` section. Do not claim deployment, Classroom submission, or unavailable external chat records.
+- [x] Keep the exact English implementation dispatch in `PROMPT.md`, committed before sending it to the implementation assistant.
+- [x] Log prior provenance honestly: the user chose D1-D5 and supplied a ChatGPT-drafted contract; the external prompt/transcript is unavailable. Earlier Codex review/setup entries are reconstructed from this conversation, not represented as contemporaneous entries.
+- [x] Obtain an independent review of the committed implementation against the approved contract, including the Review Focus inputs; resolve material findings with a failing regression test before the fix.
+- [x] Record actual verification commands, outcomes, protected-file checks, and commit chronology in `docs/verification.md`.
+- [x] Write the six-row self-assessment with specific evidence and a candid `What I did not manage` section. Do not claim deployment, Classroom submission, or unavailable external chat records.
 - [ ] Integrate the completed branch, push to the user-authorized GitHub repository, and confirm local/remote commit hashes agree.
 - [ ] Package the project including `.git`, verify ZIP contents and document totals, and remove only proven disposable session artifacts.
