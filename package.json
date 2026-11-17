@@ -1,0 +1,17 @@
+{
+  "name": "ia5-starter",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CSC13008 IA#5 — a REST API from a specification: spec first, code second",
+  "engines": {
+    "node": ">=18.18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test --test-reporter=spec checks/reviews.test.js"
+  },
+  "dependencies": {
+    "express": "5.2.1"
+  }
+}
