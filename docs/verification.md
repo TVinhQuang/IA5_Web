@@ -99,6 +99,10 @@ The two files in `Ảnh minh chứng/` were supplied by the student before this 
 
 The final ZIP must contain the whole project and its hidden `.git` directory, including `docs/api/`, `PROMPT.md`, `AI-LOG.md`, and `SELF_ASSESSMENT_REPORT.md`. It excludes `node_modules/`, session scratch work, and the ZIP itself. Its student ID and claimed total must match the self-assessment.
 
+The project was fast-forwarded onto `main` and pushed to `https://github.com/TVinhQuang/IA5_Web.git`. The submission is `../24127523_98.zip`, with a single `ia5-starter/` project folder. The archive is produced with .NET ZIP support, preserving Unicode filenames and hidden Git metadata. The Windows tar attempt failed on this OneDrive/Unicode workspace and its incomplete output was replaced by the complete ZIP.
+
+Archive inspection opened the ZIP successfully, confirmed all required documents and `.git/HEAD`, `.git/config`, and `.git/refs/heads/main`, excluded `node_modules/`, `.superpowers/`, and Git lock files, checked the archived self-assessment total of 98, and compared every archived file to its source SHA-256 hash. The archive is refreshed and checked again after the final documentation commit so it contains the submitted history.
+
 ## Limitations
 
 - The original external ChatGPT drafting transcript was not supplied. The log describes the known provenance without inventing the unavailable prompt.

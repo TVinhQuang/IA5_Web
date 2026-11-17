@@ -66,5 +66,5 @@
 - [x] Obtain an independent review of the committed implementation against the approved contract, including the Review Focus inputs; resolve material findings with a failing regression test before the fix.
 - [x] Record actual verification commands, outcomes, protected-file checks, and commit chronology in `docs/verification.md`.
 - [x] Write the six-row self-assessment with specific evidence and a candid `What I did not manage` section. Do not claim deployment, Classroom submission, or unavailable external chat records.
-- [ ] Integrate the completed branch, push to the user-authorized GitHub repository, and confirm local/remote commit hashes agree.
-- [ ] Package the project including `.git`, verify ZIP contents and document totals, and remove only proven disposable session artifacts.
+- [x] Integrate the completed branch, push to the user-authorized GitHub repository, and confirm local/remote commit hashes agree.
+- [x] Package the project including `.git`, verify ZIP contents and document totals, and evaluate cleanup of proven disposable session artifacts. Seven scratch files are retained because their OneDrive reparse parents trigger the standing cleanup exclusion; `.superpowers/` is excluded from the ZIP.

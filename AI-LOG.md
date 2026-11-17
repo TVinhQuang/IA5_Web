@@ -53,3 +53,13 @@ By hand: No new student-authored code is claimed.
 Result: Task quality Approved; specification compliant. A second fresh reviewer completed the whole-branch review through `0b25c2a`, confirmed the history/evidence/protected-file comparisons, and approved merging with no Critical or Important findings. The same optional timestamp-tie regression remains disclosed. Final ZIP contents and remote synchronization are checked separately during handoff.
 
 Cleanup: Seven verified session scratch files under `.superpowers/sdd/` are retained because OneDrive applied reparse attributes to their parent chain and the standing cleanup rule prohibits deletion through such parents. They are excluded from the submission ZIP. No pre-existing files or requested deliverables are cleanup targets.
+
+## 2026-11-17 - GitHub synchronization and archive inspection
+
+Tool: Codex coordinator, Git, and .NET ZIP support.
+Asked for: Finish the reviewed assignment and prepare its submission archive.
+Kept: The complete commit sequence, approved contract, passing implementation, required reports, verification outputs, and the student's two baseline screenshots.
+Changed: Used .NET ZIP support after the Windows tar attempt failed on the OneDrive/Unicode workspace; replaced only the incomplete submission output created by this session.
+Rejected: `node_modules/`, session scratch `.superpowers/`, and transient Git lock files are excluded from the submission archive. No user file was removed.
+By hand: The student remains responsible for personally submitting the archive through their university account and explaining the work.
+Result: Merged by fast-forward onto `main` and pushed to the provided GitHub repository. The ZIP opened successfully, required documents and hidden Git metadata were present, its total matched 98, and every archived file matched its source SHA-256 hash. Final documentation is committed before refreshing and rechecking the delivered archive.
