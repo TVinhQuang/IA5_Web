@@ -93,7 +93,7 @@ The first two commands printed nothing after implementation. Review the history 
 
 ## Screenshots
 
-The two files in `Ảnh minh chứng/` were supplied by the student before this implementation. They are retained as original baseline evidence, not represented as screenshots of the completed API.
+`Ảnh minh chứng/` contains four original student-supplied screenshots, with a [before/after index](../Ảnh%20minh%20chứng/README.md). `Screenshot 2026-11-17 145420.png` and `Screenshot 2026-11-17 145427.png` are retained as baseline evidence. After reviewing the implementation and rerunning `npm test`, the student supplied `Screenshot 2026-11-17 193211.png` (passing C1-C24 details) and `Screenshot 2026-11-17 193219.png` (24 pass / 0 fail, no skipped or cancelled tests). The final screenshots supplement the recorded output in `docs/evidence/starter-checks.txt`; all four image files retain their original contents and filenames.
 
 ## Submission contents
 

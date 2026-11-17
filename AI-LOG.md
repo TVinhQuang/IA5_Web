@@ -63,3 +63,13 @@ Changed: Used .NET ZIP support after the Windows tar attempt failed on the OneDr
 Rejected: `node_modules/`, session scratch `.superpowers/`, and transient Git lock files are excluded from the submission archive. No user file was removed.
 By hand: The student remains responsible for personally submitting the archive through their university account and explaining the work.
 Result: Merged by fast-forward onto `main` and pushed to the provided GitHub repository. The ZIP opened successfully, required documents and hidden Git metadata were present, its total matched 98, and every archived file matched its source SHA-256 hash. Final documentation is committed before refreshing and rechecking the delivered archive.
+
+## 2026-11-17 - Final passing-test screenshots
+
+Tool: Codex coordinator, with a read-only documentation audit assistant.
+Asked for: Add the student's two final passing-test screenshots to the evidence folder so the submission contains both baseline and final results.
+Kept: Both original baseline screenshots and the two supplied final screenshots, preserving their original filenames and image contents.
+Changed: Added `Screenshot 2026-11-17 193211.png` and `Screenshot 2026-11-17 193219.png` to `Ảnh minh chứng/`, added a before/after index, and updated the verification record and criterion 3 evidence. GitHub and the submission archive are refreshed after committing these evidence updates.
+Rejected: No original screenshot was replaced or recreated. No source, contract, protected file, test assertion, or self-assessment score was changed.
+By hand: The student reviewed the completed work, reran `npm test`, confirmed the results, and supplied the two final screenshots.
+Result: Visual inspection confirmed the final C1-C24 pass details and the 24 pass / 0 fail summary, with no skipped or cancelled tests. Copied files were verified against the original screenshots using SHA-256. Tests were not rerun for this image/document-only update.
