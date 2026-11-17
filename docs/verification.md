@@ -35,6 +35,12 @@ One optional test-coverage improvement was deferred: the HTTP creation-order tes
 
 The unchanged `src/server.js` still uses `Number(process.env.PORT) || 3001`; the test/helper runs on isolated ports confirm that the environment override works. The `500 INTERNAL` envelope was inspected rather than induced through a new public endpoint.
 
+A second fresh reviewer completed the whole-branch review through `0b25c2a`, confirmed the recorded history and protected-file comparisons, and approved merging with no Critical or Important findings. The only Minor finding remained the disclosed timestamp-tie test improvement. Archive contents and remote synchronization are checked separately during handoff. The score is a self-assessment against the supplied rubric, not a guarantee of the instructor's mark. Missing external drafting records remain an explicitly disclosed evidence limitation. No deployment or production-hardening claim is made.
+
+## Session scratch cleanup
+
+Seven known disposable review/coordination files under `.superpowers/sdd/` were created during this session. OneDrive subsequently applied reparse attributes to their parent chain. The standing cleanup rule rejects deletion through reparse parents, so those files are retained and excluded from the submission archive. No shared temporary directory, pre-existing file, screenshot, dependency installation, source file, or requested deliverable was deleted.
+
 ## Reproduce locally
 
 Use Node.js 18.18 or newer. Run all commands from the project root. On Windows PowerShell, use `npm.cmd` if local execution policy prevents launching `npm.ps1`; no policy change is necessary.

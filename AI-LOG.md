@@ -50,4 +50,6 @@ Kept: The implementation after the reviewer approved it with no Critical or Impo
 Changed: Documented the review's optional coverage limitation: the HTTP creation-order test does not deliberately force identical timestamps. The implementation's reverse insertion order and stable sort handle ties correctly.
 Rejected: No code fix was requested for this optional test improvement. Unchanged port configuration and protected-file comparisons were separately verified by the coordinator; the 500 branch was inspected without adding a fault-injection route.
 By hand: No new student-authored code is claimed.
-Result: Task quality Approved; specification compliant. Final submission review and ZIP inspection follow after the evidence documents are complete.
+Result: Task quality Approved; specification compliant. A second fresh reviewer completed the whole-branch review through `0b25c2a`, confirmed the history/evidence/protected-file comparisons, and approved merging with no Critical or Important findings. The same optional timestamp-tie regression remains disclosed. Final ZIP contents and remote synchronization are checked separately during handoff.
+
+Cleanup: Seven verified session scratch files under `.superpowers/sdd/` are retained because OneDrive applied reparse attributes to their parent chain and the standing cleanup rule prohibits deletion through such parents. They are excluded from the submission ZIP. No pre-existing files or requested deliverables are cleanup targets.
